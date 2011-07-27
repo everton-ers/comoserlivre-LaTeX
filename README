@@ -1,9 +1,10 @@
 comoserlivre-LaTeX
-author everton rs 
 
-Instructions about latex commands
+DESCRIPTION:
 
-=============== PT-BR =========================
+INSTALL:
+
+USE:
 
 1) Imagens "png", compilar com o comando #> ebb nome.png
 
@@ -15,11 +16,8 @@ Instructions about latex commands
 
 5) O indice remissivo eh gerado com o comando #> makeindex nome.idx
 
-=============== PT-BR =========================
-
-=============== EN =========================
+MORE:
 
 
-=============== EN =========================
 
-(www.tconibo.org)
+

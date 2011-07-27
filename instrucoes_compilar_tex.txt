@@ -1,0 +1,12 @@
+
+
+
+as imagens png compilar antes com "ebb nome.png"
+
+latex nome.tex (duas vezes por causa das referencias)
+
+dvipdfm nome.tex
+
+\appendix gera arquivos apendice
+
+O Indice remissivo gera com o comando "makeindex nome.idx"

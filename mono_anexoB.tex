@@ -1,0 +1,249 @@
+\section*{Dicas e Diretrizes para se Iniciar um Projeto de
+Software Livre}
+\subsection*{1. Introdução}
+O objetivo deste documento é mostrar como iniciar um projeto de SL na visão
+de gestão de projetos. Desta forma, realizamos um estudo no sentido de fornecer dicas
+de como pode ser iniciado um novo projeto de SL.\\
+Assim, construímos um esquema passo a passo de como futuros gerentes de
+projetos podem integrar-se num ambiente de desenvolvimento de SL. Este documento
+está dividido de forma a enfatizar os seguintes aspectos:
+\begin{itemize}
+\item{Aspectos úteis para iniciar um projeto de SL;}
+\item{Licenciando um projeto de SL;}
+\item{Montagem da infra-estrutura para desenvolvimento do projeto;}
+\item{Definição dos papéis que fazem parte do projeto;}
+\item{Documentação.}
+\end{itemize}
+\subsection*{2. Aspectos Úteis para Iniciar um Projeto de SL}
+No momento em que se decide dar início a um projeto de SL, deve-se considerar
+alguns pontos que podem ajudar o autor (que certamente, mas não necessariamente, será
+o líder do projeto) de um projeto.
+Considerando que o início de um projeto é a fase onde existe o maior número de
+casos de insucesso, é interessante realizar um pequeno ``checklist`` para se assegurar de
+quais são os passos relevantes para iniciar um desenvolvimento com maior segurança.
+Desta forma, descrevemos alguns passos importantes para guiar um gerente no
+momento em que ele escolhe o modelo de desenvolvimento de SL para seu projeto.
+\subsubsection*{2.1. Procure projetos semelhantes}
+Na medida em que existem outras comunidades com o desenvolvimento de um
+determinado projeto em estágio amadurecido maior, pode ser mais fácil (e rápido)
+contribuir para este projeto ao invés de iniciar um do zero. A participação em uma
+comunidade de SL já estabelecida retira do propenso participante as responsabilidades relativas à gerência do projeto. Assim, esforço exigido para coordenação é excluído caso esta decisão seja tomada.\\
+Informações sobre projetos de SL podem ser facilmente encontradas em diversos
+meios fornecidos através da Internet.
+\begin{itemize}
+\item{ SourceForge (http://sourceforge.net/)
+Atualmente é o maior portal de projetos de SL do mundo. Milhares de pessoas de
+todo o mundo cadastram seus projetos neste portal. Nele podem ser feitas consultas
+à sua base de dados para se verificar a existência de projetos de SL. As buscas
+podem ser realizadas através do nome do projeto ou pela categoria (banco de dados,
+comunicação, editores de texto, segurança, etc.).}
+\item{ Freshmeat.net (http://freshmeat.net/)
+Portal destinado a informar usuários de SL sobre lançamentos de versões de projetos
+de SL. Oferece um mecanismo de busca interno que pode ser utilizado para verificar
+a existência de projetos de SL cadastrados em sua base de dados. Ao contrário do
+SourceForge, este portal não oferece um ambiente para desenvolvimento de projetos
+de SL, apenas oferece informações sobre projetos de SL.}
+\item{Savannah.gnu.org e Savannah.nongnu.org. O portal savannah.gnu.org é destinado ao desenvolvimento, distribuição e
+manutenção específica de software GNU. Já savannah.nongnu.org é destinado ao
+desenvolvimento de SL que não necessariamente é software do projeto GNU.
+Ambos os portais oferecem ferramentas de busca a projetos cadastrados em suas
+bases de dados.}
+\item{ Google (http://www.google.com/)
+Poderosa ferramenta de busca na Internet. Apesar de não ser uma ferramenta
+destinada diretamente ao desenvolvimento de SL, podem ser encontrados diversos
+projetos através de seu uso.
+Estes são alguns exemplos de ferramentas onde pode-se pesquisar a respeito de
+projetos de SL. De maneira que, encontrar projetos de SL semelhantes ao projeto que
+alguém se proponha a implementar pode um grande economizar esforço de
+implementação, pois, pode-se participar de um projeto em andamento ao invés de iniciar
+um novo projeto do zero.}
+\end{itemize}
+
+\subsection*{3. Licenciando um projeto de SL}
+As licenças de SL têm como principal função a proteção dos usuários de SL,
+mantendo o direito de utilização do software distribuído sobre seus termos. A escolha
+de uma licença é uma das atividades mais importantes no contexto do desenvolvimento
+de SL, pois é a licença que define as características e restrições de uso, modificação e distribuição do software. Embora exista a possibilidade de mudanças na licença de um SL, é importante
+considerar que podem ocorrer prejuízos com estas mudanças no futuro. Membros da
+comunidade podem se sentir traídos ou explorados em seu trabalho quando uma licença
+muda de GPL para uma licença BSD, por exemplo.
+
+\subsubsection*{3.1.1. Como licenciar um SL}
+
+Antes de licenciar um SL é necessário escolher uma licença de SL. Não está no
+escopo deste trabalho uma discussão detalhada sobre as licenças de SL e suas
+características, maiores informações sobre licenças podem ser encontradas em:
+\begin{itemize}
+\item{ http://www.gnu.org/licenses/}
+\item{ http://www.opensource.org/licenses/}
+\end{itemize}
+
+Assim, iremos nos concentrar em como uma licença de SL pode ser aplicada a
+um determinado produto de software.
+
+\begin{itemize}
+\item{Passo 1: Crie um arquivo de texto separado para as distribuições do software
+(código-fonte e binária), colocando uma cópia completa da licença utilizada pelo
+software neste arquivo. Isso pode ser feito através de um arquivo chamado
+license.txt, que viria anexado ao programa.}
+\item{Passo 2: Para cada arquivo de código-fonte que compõe o software coloque um
+aviso no topo sobre a licença que está sendo utilizada no programa e onde ela pode
+ser encontrada.}
+\end{itemize}
+
+
+\begin{verbatim}
+As linhas iniciais podem descrever o programa, seu autor 
+e para quem os direitos de
+cópia estão resertvados
+Criado em <data de criação>
+Criado por <nome do autor>
+Copyright (C) 2005 <que detém direito de cópia>, Todos os 
+direitos reservados.
+As linhas subseqüentes mostram informações sobre a licença 
+em que o software está
+sendo distribuído e como obter informações sobre ela
+Este programa é Software Livre; você pode redistribuí-lo e/ou
+modifica-lo sob os termos da GNU Licença Pública Geral como 
+publicada na Free Software Foundation; tanto na versão 2 da licença, 
+ou (caso seja sua opção) qualquer versão atualizada.
+Este programa é distribuído na esperança de que seja útil, 
+mas SEM QUALQUER GARANTIA; nem mesmo incluir garantia de 
+LUCRATIVIDADE ou
+APLICABILIDADE PARA UM PROPÓSITO ESPECÍFICO. Veja a GNU Licença
+Pública Geral para maiores detalhes.
+Você deve ter recebido uma cópia da GNU Licença Pública Geral
+ anexada a este programa; caso contrário, escreva para a 
+Free Software Foundation, Inc., 51 Franklin Street, Fifth floor,
+ Boston, MA, 02110-1301, USA.\\
+A execução destes dois passos é suficiente para informar que 
+um software está sob uma licença de SL.
+
+\end{verbatim}
+
+
+\subsection*{4. Montagem da Infra-estrutura para Desenvolvimento do Projeto}
+
+
+A montagem de um ambiente de desenvolvimento de SL requer a utilização de
+algumas ferramentas que irão ajudar na integração da comunidade no sentido de
+desenvolver um produto de software. Desta maneira levantamos as seguintes
+ferramentas, que consideramos essenciais, para prover um ambiente ``mínimo`` para
+desenvolver SL.\\
+
+\paragraph{Página do projeto}
+
+Todo projeto de SL deve possuir uma página de acompanhamento do projeto,
+onde são dispostas informações gerais sobre:
+\begin {itemize}
+\item{O andamento do projeto;}
+\item{Acesso a informações e documentos (geralmente em formato HTML)}
+\item{Acesso direto para download do projeto}
+\item{Acesso a listas de discussão;}
+\item{Informar sobre eventos e notícias a respeito do projeto;}
+\item{Disponibilizar documentação sobre meios de como contribuir para o projeto.}
+\end {itemize}
+
+\paragraph{Listas de discussão}
+As listas servem como um meio de comunicação entre os membros de um
+projeto de SL. Através delas os membros de um projeto podem discutir sobre o
+desenvolvimento, o uso, o lançamento de novas versões e qualquer outro tópico
+relevante ao projeto.
+
+\vspace{3mm}
+
+\paragraph{Sistema de gerência de configuração}
+
+O ambiente de desenvolvimento de projetos de SL é descentralizado, várias
+pessoas contribuem paralelamente com a evolução do projeto. De maneira que existe a
+necessidade de se prover um ambiente que armazene os artefatos construídos pelos
+membros do projeto e realize a gestão das alterações sobre estes artefatos. Assim, este ambiente é fornecido por um sistema de gerência de configuração.
+
+\vspace{3mm}
+
+\paragraph{Sistema de rastreamento e acompanhamento de mudanças}
+Estes sistemas são utilizados, principalmente, para efetuar o controle de
+alterações e correções e problemas relatados em um software. Através de um sistema
+deste tipo pode ser realizada a manutenção do projeto de maneira controlada, onde os
+erros podem ser priorizados e as versões futuras do projeto podem ser destinadas à sua
+correção.
+
+\vspace{3mm}
+
+\paragraph{Ferramentas para empacotamento do projeto}
+A forma de disponibilizar os resultados da construção de um projeto de SL é
+importantíssima. Facilitar o acesso ao projeto de uma maneira simples é essencial para
+viabilizar seu uso. Desta maneira, entram em uso as ferramentas que permitem o
+empacotamento de um projeto (que pode ser composto por diversos tipos de arquivos)
+em uma unidade de software simples de baixar e configurar localmente. Para sistemas
+Windows pode ser utilizado o formato .zip, para sistemas *NIX pode ser utilizado o
+formato .tar, que ainda podem ser comprimidos no formato .tar.gz. Os pacotes binários
+podem vir com extensões .rpm, .exe, ou .deb, por exemplo.
+
+\subsubsection*{4.1. Onde encontrar um ambiente com este ferramental incluso?}
+
+Na Internet existem portais destinados a fomentar o desenvolvimento de projetos
+de SL através de um ambiente colaborativo de desenvolvimento que integra todas estas
+ferramentas (e outras mais). Estas ferramentas provêem um ambiente para
+gerenciamento e desenvolvimento dos projetos disponibilizando um conjunto de
+ferramentas propícias para tal atividade e sem nenhum custo para os desenvolvedores.
+O mais famoso, e utilizado, ambiente nesse estilo é o SourceForge.net. No Brasil
+também existe um grande portal, com objetivos similares ao SourceForge, o Código
+Livre.
+
+\subsection*{5. Definição dos Papéis que Fazem parte do Projeto}
+
+É importante definir quais são os papéis que serão utilizados no projeto e na
+medida em que o projeto tem seu andamento, alocar membros para executarem estes
+papéis.
+No documento de práticas construído para o FLO-PREF, estão definidos vários
+tipos de papéis que podem ser instanciados em um projeto de SL. A complexidade do
+projeto pode ser utilizada para definir uma maior, ou menor, granularidade de papéis em um projeto.
+
+\subsection*{6. Documentação}
+
+Disponibilizar documentos sobre o projeto também é importantíssimo para a
+sobrevivência de um projeto. Há várias formas de documentar um projeto de SL, como
+também há vários tipos de pessoas interessadas em diferentes formas de documentos no
+contexto de um projeto de SL. Como nosso objetivo não é abordar o público-alvo para o
+qual a documentação é produzida, vamos nos ater a aspectos práticos de produção de
+documentação.
+Tanto desenvolvedores quanto usuários esperam obter algum tipo de
+documentação relativa ao projeto, onde, deve existir pelo menos os seguintes recursos
+voltados à documentação:
+
+\vspace{3mm}
+
+\paragraph{Arquivo LEIAME}
+Documento de texto contendo alguns tópicos referentes à instalação,
+compilação, configuração... Enfim, contém informações mínimas para fazer com que o
+programa execute na máquina de um usuário. Não deve ser um arquivo grande e
+cansativo, deve conter apenas informações essenciais para utilização do software.
+
+\vspace{3mm}
+
+\paragraph{Arquivo INSTALL}
+Deve ser um arquivo contendo apenas informações de como fazer a construção e
+instalação do programa. Mostra quais são os comandos básicos utilizados para
+instalação e quais são as opções de uso destes comandos.
+
+\vspace{3mm}
+
+\paragraph{Arquivo CHANGELOG }
+É um arquivo que informa as mudanças, as correções e funcionalidades
+adicionadas que foram efetuadas no programa entre releases diferentes. É interessante
+colocar estas informações, também, na página do projeto, pois facilita aos usuários o
+seu acesso e os ajuda na decisão de utilizar a nova versão, ou esperar por modificações mais relevantes.
+
+\vspace{3mm}
+
+
+\paragraph{FAQ }
+Um FAQ (Frequent Asked Questions) é utilizado para colocar questões que são
+repetidamente feitas a respeito do projeto em um único local, de forma a evitar
+replicação de informações. Uma política interessante para se montar um FAQ é quando
+uma mesma questão for postada mais de duas vezes em listas de discussões é útil pô-la
+no FAQ.
+Todos os documentos citados acima podem estar em formato HTML e acessíveis
+através da navegação na página do projeto. Outros documentos serão criados durante a
+evolução do projeto, tais como manuais ou tutoriais.

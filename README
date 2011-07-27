@@ -1,1 +1,25 @@
 comoserlivre-LaTeX
+author everton rs 
+
+Instructions about latex commands
+
+=============== PT-BR =========================
+
+1) Imagens "png", compilar com o comando #> ebb nome.png
+
+2) #> latex nome.tex (duas vezes por causa das referencias)
+
+3) #> dvipdfm nome.tex
+
+4) O comando latex \appendix gera os arquivos de apendice.
+
+5) O indice remissivo eh gerado com o comando #> makeindex nome.idx
+
+=============== PT-BR =========================
+
+=============== EN =========================
+
+
+=============== EN =========================
+
+(www.tconibo.org)
